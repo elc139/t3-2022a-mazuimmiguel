@@ -1,0 +1,47 @@
+
+Options: -dont-fetch-model -learner RandomForestClassifier -parameters max_depth=16,max_samples=1.0,n_jobs=1 -py-command python3 
+
+=== Classifier model (full training set) ===
+
+RandomForestClassifier(max_depth=16, max_samples=1.0, n_jobs=1)
+
+Time taken to build model: 75.6 seconds
+
+Time taken to test model on test split: 3.88 seconds
+
+=== Error on test split ===
+
+Correctly Classified Instances       97438               83.8523 %
+Incorrectly Classified Instances     18764               16.1477 %
+Kappa statistic                          0.7349
+Mean absolute error                      0.0924
+Root mean squared error                  0.1902
+Relative absolute error                 51.8591 %
+Root relative squared error             63.6591 %
+Total Number of Instances           116202     
+
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.792    0.083    0.846      0.792    0.818      0.720    0.948     0.923     1
+                 0.902    0.191    0.816      0.902    0.857      0.712    0.943     0.935     2
+                 0.902    0.008    0.888      0.902    0.895      0.888    0.997     0.959     3
+                 0.799    0.000    0.912      0.799    0.852      0.853    0.999     0.916     4
+                 0.233    0.000    0.944      0.233    0.373      0.465    0.987     0.736     5
+                 0.636    0.002    0.900      0.636    0.745      0.751    0.994     0.868     6
+                 0.794    0.001    0.977      0.794    0.876      0.877    0.998     0.958     7
+Weighted Avg.    0.839    0.124    0.843      0.839    0.835      0.730    0.952     0.927     
+
+
+=== Confusion Matrix ===
+
+     a     b     c     d     e     f     g   <-- classified as
+ 33663  8754     4     0     1     0    71 |     a = 1
+  5247 50829   188     0    25    67     6 |     b = 2
+     0   537  6569    18     0   162     0 |     c = 3
+     0     0    92   417     0    13     0 |     d = 4
+    29  1392    27     0   440     3     0 |     e = 5
+     1   730   517    22     0  2216     0 |     f = 6
+   839    19     0     0     0     0  3304 |     g = 7
+
